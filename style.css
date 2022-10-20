@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+:root {
+    /* Primary */
+
+    --Strong-cyan: hsl(172, 67%, 45%);
+
+    /* Neutral */
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--Light-grayish-cyan);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 2.4rem;
+}
+
+/* logo */
+.logo {
+    margin-top: 6rem;
+}
+
+
+/* Section */
+.sectionContainer {
+    max-width: 80rem;
+    padding: 2.4rem;
+    
+    background-color: var(--White);
+    border-radius: 2rem;
+}
+
+.sectionContainer form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+/* calculator tip  */
+.sectionContainer form .calculatorTip {
+    width: 50%;
+    padding: 2.4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* calculator tip > bill */
+.sectionContainer form .calculatorTip .bill {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.sectionContainer form .calculatorTip .bill label {
+    color: var(--Dark-grayish-cyan);
+}
+
+.sectionContainer form .calculatorTip .bill div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sectionContainer form .calculatorTip .bill div:nth-child(1) > small {
+    font-size: 1.3rem;
+    color: hsl(0, 100%, 74%);
+}
+
+.sectionContainer form .calculatorTip .bill img {
+    position: absolute;
+    top: 65%;
+    left: 2%;
+}
+
+.sectionContainer form .calculatorTip .bill input {
+    width: 100%;
+    padding: .5rem;
+
+    text-align: right;
+    color: var(--Very-dark-cyan);
+
+    border: none;
+    background-color: var(--Very-light-grayish-cyan);
+    border-radius: .5rem;
+
+    cursor: pointer;
+}
+
+.sectionContainer form .calculatorTip .bill input:focus-visible {
+    outline: 2px solid var(--Strong-cyan);
+}
+
+
+/* calculator tip > tip porcentage */
+.sectionContainer form .calculatorTip .tipPorcentage {
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionContainer form .calculatorTip .tipPorcentage label {
+    color: var(--Dark-grayish-cyan);
+}
+
+.sectionContainer form .calculatorTip .tipPorcentage .porcentage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.sectionContainer form .calculatorTip .tipPorcentage .porcentage .tip {
+    width: 31%;
+    padding: 1rem;
+
+    border: none;
+    border-radius: .5rem;
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+
+    cursor: pointer;
+}
+
+.sectionContainer form .calculatorTip .tipPorcentage .porcentage .tip:hover {
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.sectionContainer form .calculatorTip .tipPorcentage .porcentage .tip:nth-child(1):focus,
+.sectionContainer form .calculatorTip .tipPorcentage .porcentage .tip:nth-child(2):focus,
+.sectionContainer form .calculatorTip .tipPorcentage .porcentage .tip:nth-child(3):focus,
+.sectionContainer form .calculatorTip .tipPorcentage .porcentage .tip:nth-child(4):focus,
+.sectionContainer form .calculatorTip .tipPorcentage .porcentage .tip:nth-child(5):focus {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.sectionContainer form .calculatorTip .tipPorcentage .porcentage #custom {
+    width: 31%;
+    padding: .5rem;
+
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    border-radius: .5rem;
+
+    text-align: right;
+    color: var(--Very-dark-cyan);
+
+    cursor: pointer;
+}
+
+.sectionContainer form .calculatorTip .tipPorcentage .porcentage #custom::placeholder {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sectionContainer form .calculatorTip .tipPorcentage .porcentage #custom:focus-visible {
+    outline: 2px solid var(--Strong-cyan);
+}
+
+/* calculator tip > number people */
+.sectionContainer form .calculatorTip .numberPeople {
+    width: 100%;
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.sectionContainer form .calculatorTip .numberPeople label {
+    width: 100%;
+    color: var(--Dark-grayish-cyan);
+}
+
+.sectionContainer form .calculatorTip .numberPeople img {
+    position: absolute;
+    top: 65%;
+    left: 2%;
+}
+
+.sectionContainer form .calculatorTip .numberPeople input {
+    width: 100%;
+    padding: .5rem;
+
+    text-align: right;
+    color: var(--Very-dark-cyan);
+
+    border: none;
+    background-color: var(--Very-light-grayish-cyan);
+    border-radius: .5rem;
+
+    cursor: pointer;
+}
+
+.sectionContainer form .calculatorTip .numberPeople input:focus-visible {
+    outline: 2px solid var(--Strong-cyan);
+}
+
+.sectionContainer form .calculatorTip .numberPeople div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sectionContainer form .calculatorTip .numberPeople div:nth-child(1) > small {
+    font-size: 1.3rem;
+    color: hsl(0, 100%, 74%);
+}
+
+/* totalValues */ 
+.sectionContainer form .totalValues {
+    width: 50%;
+    padding: 2.4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    background-color: var(--Very-dark-cyan);
+    border-radius: 1.5rem;
+}
+
+/* totalValues > tip amount for person */
+.sectionContainer form .totalValues .tipAmountForPerson {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-top: 3rem;
+}
+
+.sectionContainer form .totalValues .tipAmountForPerson .tipAmount {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionContainer form .totalValues .tipAmountForPerson .tipAmount > span {
+    color: var(--White);
+    font-size: 2rem;
+}
+
+.sectionContainer form .totalValues .tipAmountForPerson .tipAmount > small {
+    color: var(--Grayish-cyan);
+    font-size: 1.6rem;
+}
+
+.sectionContainer form .totalValues .tipAmountForPerson .tipAmountPerson {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionContainer form .totalValues .tipAmountForPerson .tipAmountPerson svg path {
+    fill: var(--Strong-cyan);
+}
+
+.sectionContainer form .totalValues .tipAmountForPerson .tipAmountPerson > span {
+    color: var(--Strong-cyan);
+}
+
+/* totalValues > total for person */
+.sectionContainer form .totalValues .totalForPerson {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-top: 5rem;
+}
+
+.sectionContainer form .totalValues .totalForPerson .total {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionContainer form .totalValues .totalForPerson .total > span {
+    color: var(--White);
+    font-size: 2rem;
+}
+
+.sectionContainer form .totalValues .totalForPerson .total > small {
+    color: var(--Grayish-cyan);
+    font-size: 1.6rem;
+}
+
+.sectionContainer form .totalValues .totalForPerson .totalPerson {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionContainer form .totalValues .totalForPerson .totalPerson svg path {
+    fill: var(--Strong-cyan);
+}
+
+.sectionContainer form .totalValues .totalForPerson .totalPerson > span {
+    color: var(--Strong-cyan);
+}
+
+/* totalValues > button */
+.sectionContainer form .totalValues #reset {
+    margin-top: 9rem;
+    width: 100%;
+    padding: 1rem;
+
+    text-transform: uppercase;
+    color: var(--Very-dark-cyan);
+    background-color: var(--Strong-cyan);
+    border: none;
+    border-radius: .5rem;
+
+    cursor: pointer;
+}
+
+.sectionContainer form .totalValues #reset:hover {
+    background-color: var(--Light-grayish-cyan);
+}
+
+/* footer */
+.footerContainer { 
+    font-size: 1.1rem; 
+    text-align: center; 
+}
+    
+.footerContainer a {
+    color: var(--Very-dark-cyan); 
+}
+
+
+
+@media screen and (max-width: 725px) {
+    .sectionContainer {
+        border-radius: 2rem 2rem 0 0;
+    }
+
+    .sectionContainer form {
+        flex-direction: column;
+    }
+
+    .sectionContainer form .calculatorTip {
+        width: 100%;
+    }
+
+    .sectionContainer form .calculatorTip .tipPorcentage {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sectionContainer form .calculatorTip .tipPorcentage .porcentage {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sectionContainer form .totalValues {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .sectionContainer form .calculatorTip .numberPeople img {
+        top: 78%;
+        left: 2%;
+    }
+}
